@@ -12,8 +12,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware'=>['auth', 'isAdmin']], function(){
-    Route::get('dashboard', function(){
-        return view('admin.index');
-    });
+    Route::get('dashboard', 'Admin\FrontendController@index');
+    Route::get('categories', 'Admin\CategoryController@index');
+    Route::get('add-category', 'Admin\CategoryController@create');
+    Route::post('store-category', 'Admin\CategoryController@store');
+    Route::get('edit-category/{id}', 'Admin\CategoryController@edit');
+    Route::put('update-category/{id}', 'Admin\CategoryController@update');
+    Route::delete('delete-category/{id}', 'Admin\CategoryController@destroy');
 });
 

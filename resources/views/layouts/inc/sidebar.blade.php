@@ -22,9 +22,9 @@
           </a>
         </li>
         <li>
-          <a href="./icons.html">
+          <a href="{{ url('categories') }}">
             <i class="nc-icon nc-diamond"></i>
-            <p>Icons</p>
+            <p>Category</p>
           </a>
         </li>
         <li>

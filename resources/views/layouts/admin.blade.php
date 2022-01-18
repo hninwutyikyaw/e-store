@@ -51,7 +51,11 @@
 
     <script src="{{ asset('admin/js/paper-dashboard.min.js') }}"></script>
 
-
+    <!--  Sweetalert   -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (session('status'))
+        <script> swal("{{ session('status') }}") </script>
+    @endif
     @yield('scripts')
 </body>
 </html>
