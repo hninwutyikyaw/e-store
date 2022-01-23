@@ -19,5 +19,8 @@ Route::group(['middleware'=>['auth', 'isAdmin']], function(){
     Route::get('edit-category/{id}', 'Admin\CategoryController@edit');
     Route::put('update-category/{id}', 'Admin\CategoryController@update');
     Route::delete('delete-category/{id}', 'Admin\CategoryController@destroy');
+
+    Route::resource('products', 'Admin\ProductController');
+
 });
 

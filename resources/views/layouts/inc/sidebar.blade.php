@@ -15,22 +15,22 @@
     </div>
     <div class="sidebar-wrapper">
       <ul class="nav">
-        <li class="active ">
-          <a href="./dashboard.html">
+        <li class=" {{ Request::is('dashboard') ? 'active' : ' '}} ">  
+          <a href="{{ url('dashboard') }}">
             <i class="nc-icon nc-bank"></i>
             <p>Dashboard</p>
           </a>
         </li>
-        <li>
+        <li class="nav-item {{ Request::is('categories') ? 'active' : ' '}}">
           <a href="{{ url('categories') }}">
-            <i class="nc-icon nc-diamond"></i>
+            <i class="nc-icon nc-diamond"></i> 
             <p>Category</p>
           </a>
         </li>
-        <li>
-          <a href="./map.html">
+        <li class="nav-item {{ Request::is('products') ? 'active' : ' ' }}">
+          <a href="{{ url('products') }}">
             <i class="nc-icon nc-pin-3"></i>
-            <p>Maps</p>
+            <p>Products</p>
           </a>
         </li>
         <li>

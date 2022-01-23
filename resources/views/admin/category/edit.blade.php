@@ -34,15 +34,16 @@
                     @enderror
                 </div>
 
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 pl-5">
+                    <input type="checkbox" name="status" class="form-check-input" >
                     <label for="status">Status</label>
-                    <input type="checkbox" name="status" {{ $category->status == '1'  ? 'checked' : ' '}}>
                 </div>
 
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 pl-5">
+                    <input type="checkbox" name="popular" class="form-check-input" >
                     <label for="popular">Popular</label>
-                    <input type="checkbox" name="popular" {{ $category->popular == '1' ? 'checked' : ' ' }}>
                 </div>
+
 
                 <div class="col-md-12 mb-3">
                     <label for="image">image</label>
@@ -79,7 +80,7 @@
                     @enderror
                 </div>
 
-                <button class="btn btn-primary float-right" type="submit">Update</button>
+                <button class="btn btn-primary ml-3" type="submit">Update</button>
             </div>
         </form>
         

@@ -106,7 +106,7 @@ class CategoryController extends Controller
         {
             $category = Category::find($id);
             $destination = 'assets/uploads/category/'.$category->image;
-            if(fileExists('destination'))
+            if(fileExists($destination))
             {
                 file::delete($destination);
             }
