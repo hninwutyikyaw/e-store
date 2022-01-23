@@ -14,6 +14,7 @@
                     <th>Name</th>
                     <th>Selling Price</th>
                     <th>Image</th>
+                    <th>Date</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </thead>

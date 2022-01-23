@@ -101,7 +101,7 @@ class ProductController extends Controller
             $destination = 'assets/uploads/product/'.$product->image;
             if(fileExists($destination))
             {
-                file::delete('$destination');
+                file::delete($destination);
             }
             $file =  $request->file('image');
             $extension = $file->getClientOriginalExtension();
