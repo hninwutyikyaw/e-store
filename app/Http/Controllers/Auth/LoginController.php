@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -30,11 +29,11 @@ class LoginController extends Controller
     // protected $redirectTo = RouteServiceProvider::HOME;
     public function authenticated()
     {
-        if(Auth::user()->role_as == '1') //Admin
+        if(auth()->user()->role_as == '1') //Admin
         {
             return redirect ('dashboard')->with('status', 'Welcome to your dashboard');
         }
-        elseif (Auth::user()->role_as == '0') //user
+        elseif (auth()->user()->role_as == '0') //user
         {
             return redirect('/home')->with('status', 'Logged in successfully');
         }

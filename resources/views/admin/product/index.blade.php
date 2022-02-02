@@ -24,7 +24,8 @@
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->category->name}}</td>
                     <td>{{ $product->name}}</td>
-                    <td>{{ $product->selling_price }}</td>
+                    {{-- <td>{{ number_format( $product->selling_price, 0, '.',',') }}</td> --}}
+                     <td>{{ $product->selling_price }}</td>
                     <td>
                         <img src="{{ asset('assets/uploads/product/'.  $product->image) }}" width="100px" alt="">
                     </td>
