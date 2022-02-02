@@ -65,22 +65,8 @@ class CategoryController extends Controller
     public function update($id, CategoryFormValidation $request)
     {
         $category = Category::find($id);
+        $this->save($category, $request);
 
-        if($request->hasFile('image'))
-        {
-            $destination = 'assets/uploads/product/'.$category->image;
-            if(fileExists($destination))
-            {
-                file::delete($destination);
-            }
-        $file =  $request->file('image');
-        $extension = $file->getClientOriginalExtension();
-        $filename = time(). '.'.$extension;
-        $file->move('assets/uploads/category/',$filename);
-        $category->image = $filename;
-    }
-
-    $category->update();
         return redirect('/categories')->with('status', 'Category updated successfully');
     }
 
