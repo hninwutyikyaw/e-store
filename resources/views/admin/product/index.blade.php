@@ -29,6 +29,7 @@
                     <td>
                         <img src="{{ asset('assets/uploads/product/'.  $product->image) }}" width="100px" alt="">
                     </td>
+                    <td>{{ $product->small_description }}</td>
                     <td>
                         <a href="{{ route('products.edit',$product->id) }}" class="btn btn-primary">Edit</a>
                     </td>
