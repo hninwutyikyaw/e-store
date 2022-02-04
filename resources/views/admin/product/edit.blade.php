@@ -12,9 +12,14 @@
             <div class="row">
                 <div class="col-md-12 mb-3">
                     <select class="form-select form-control" name="category_id">
-                        <option value="">Select a category</option>
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}"
+                                @if ($category->id == $product->category_id) 
+                                    selected="selected"
+                                @endif   
+                            >
+                            {{ $category->name }}
+                            </option>
                         @endforeach
                     </select>
                 </div>
