@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<section class="register section" id="register">
+<section class="login section" id="login">
     <div class="container login-container bd-grid">
         <img src="{{asset('frontend/img/login.png')}}" alt="" class="login-form-img">
         
