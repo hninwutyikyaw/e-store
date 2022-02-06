@@ -95,6 +95,7 @@
                 <div class="col-md-12 mb-3">
                     <label for="image">image</label>
                     @if($product->image)
+                        <input type="file" name="image" class="form-control">
                         <img src="{{ asset('assets/uploads/product/'.  $product->image) }}" width="100px" alt="">
                     @endif
                     <input type="file" name="image" class="form-control">

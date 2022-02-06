@@ -1,3 +1,207 @@
-.feature-card {
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
+/*===== VARIABLE CSS =====*/
+:root {
+    --header-height: 3rem;
+
+    /*===== VARIABLE CSS =====*/
+    --first-color:#196AEF;
+    --first-color-alt: #1A84EE;
+    --first-color-light: #F1F7FF;
+    --title-color: #393939;
+    --text-color: #707070;
+    --text-color-light: #A6A6A6;
+    --body-color: #FBFEFD;
+    --container-color: #FFFFFF;
+
+    /*===== TYPOGRAPHY =====*/
+    --body-font: 'Poppins', sans-serif ;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*===== FONT WEIGHT =====*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*===== Z_INDEX =====*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /*===== MARGEIN =====*/
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --biggest-font-size: 4rem; 
+        --h1-font-size: 2.25rem; 
+        --h2-font-size: 1.5rem; 
+        --h3-font-size: 1.25rem; 
+        --normal-font-size: 1rem; 
+        --small-font-size: .875rem; 
+        --smaller-font-size: .813rem; 
+    }
+}
+
+
+/*===== BASE =====*/
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* margin: var(--header-height) 0 0 0; */
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--body-color);
+    line-height: 1.6;
+    user-select: none;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*========== CLASS CSS ==========*/
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.section-title, .section-subtitle {
+    text-align: center;
+}
+
+.section-title {
+    color: var(--title-color);;
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+.section-subtitle{
+    display: block;
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+/*========== LAYOUT ==========*/
+/* make center */
+.bd-container {
+    max-width: 1024px;
+
+    width: calc(100% - 2rem);
+
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+
+}
+
+.bd-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*========== HEADER ==========*/
+/*up fixed when scrolling*/
+.l-header {
+    width: 100%;
+    background-color: var(--body-color);
+    position: fixed;;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+
+
+/* Login Page */
+
+.login-form {
+    padding: 1rem;
+}
+
+.login-form-img  {
+    width: 350px;
+    justify-self: center;
+}
+
+.login-form-control,
+.input-group-text
+{
+    background: transparent;
     border: none;
+    border-bottom: 1px solid #000000;
+    outline:none;
+    box-shadow:none;
+    border-radius: 0;
+}
+
+.login-form-control:active,
+.login-form-control:focus,
+.login-form-control:focus:active {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    box-shadow:none;
+}
+
+.forget-password {
+    color:#333;
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+
+/* .feature-card {
+    border: none;
+} */
+@media screen and (min-width: 960px) {
+    .login-form-img{
+        width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 576px) {
+    .login-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
 }

@@ -33,6 +33,7 @@
 
 
     <!--  JS Files   -->
+    <script src="https://kit.fontawesome.com/f9cbb06494.js" crossorigin="anonymous"></script>
     <script src="{{ asset('frontend/js/core/bootstrap.min.js') }}"></script>
     <script src="{{ asset('frontend/js/paper-dashboard.min.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
