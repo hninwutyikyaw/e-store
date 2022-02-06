@@ -142,9 +142,51 @@ img {
     z-index: var(--z-fixed);
 }
 
+.l-header {
+    width: 100%;
+    background-color: var(--body-color);
+    position: fixed;;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
 
+/*========== Change background header ==========*/
+.scroll-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-/* Login Page */
+/*==========navbar==========*/
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    border: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-collapse,
+.dropdown-menu>li>a {
+        text-align: center;
+        background-color: var(--body-color);
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0 4px 4px rgba(0, 0, 0,0, .1);
+        transition: .4s;
+        z-index: 4;
+}
+
+.dropdown-menu {
+    border: none;
+}
+
+.dropdown-menu>li>a:hover {
+    background: transparent;
+    color: var(--first-color);
+}
+
+/*==========login page==========*/
 
 .login-form,
 .register-form {
@@ -185,18 +227,25 @@ img {
     color:#333;
 }
 
+
+/*==========home page==========*/
+.feature-card {
+    border: none;
+}
+
+
 @media screen and (max-width: 576px) {
 
 }
 
-
-/* .feature-card {
-    border: none;
-} */
 @media screen and (min-width: 960px) {
     .login-form-img,
     .register-form-img{
         width: 500px;
+    }
+
+    .dropdown-menu>li>a {
+        text-align: left;
     }
 
 }
@@ -211,5 +260,4 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    
 }
