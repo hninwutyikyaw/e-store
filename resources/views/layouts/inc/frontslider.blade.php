@@ -5,15 +5,18 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="{{ asset('frontend/img/slider1.jpg') }}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="{{ asset('frontend/img/slider2.jpg') }}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="{{ asset('frontend/img/slider3.jpg') }}" class="d-block w-100" alt="...">
-        </div>
+        @php $i=1; @endphp
+        @foreach($sliders as $slider)
+            <div class="carousel-item {{ $i == '1' ? 'active' : '' }}">
+            @php $i++ @endphp
+            <img src="{{ asset('assets/uploads/slider/'.$slider->image) }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="mb-4">{{ $slider->heading }}</h2>
+                    <h4 class="mb-5">{{ $slider->description }}</h4>
+                    <a class="btn btn-success slider-button" href="{{ $slider->link }}">{{ $slider->link_name }}</a>
+              </div>
+            </div>
+        @endforeach
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -24,3 +27,4 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+

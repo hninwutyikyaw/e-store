@@ -19,6 +19,7 @@ Route::group(['middleware'=>['auth', 'isAdmin']], function(){
     Route::delete('delete-category/{id}', 'Admin\CategoryController@destroy');
 
     Route::resource('products', 'Admin\ProductController');
+    Route::resource('sliders', 'Admin\SliderController');
 
 });
 

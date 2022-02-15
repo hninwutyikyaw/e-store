@@ -3,7 +3,8 @@
 
 <div class="card">
     <div class="card-header">
-        <h4>Edit Category</h4>
+        <h4 class="card-title slider-title float-left">Edit Category</h4>
+        <a href="{{ url()->previous() }}" class="btn btn-danger float-right">Back</a>
     </div>
     <div class="card-body">
         <form action="{{ url("update-category/".$category->id) }}" method="POST" enctype="multipart/form-data">

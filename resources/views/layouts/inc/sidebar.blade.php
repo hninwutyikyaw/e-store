@@ -33,6 +33,12 @@
             <p>Products</p>
           </a>
         </li>
+        <li class="nav-item {{ Request::is('sliders') ? 'active' : ' ' }}">
+          <a href="{{ url('sliders') }}">
+            <i class="nc-icon nc-pin-3"></i>
+            <p>Sliders</p>
+          </a>
+        </li>
         <li>
           <a href="./notifications.html">
             <i class="nc-icon nc-bell-55"></i>

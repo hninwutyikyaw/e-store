@@ -3,7 +3,8 @@
 
 <div class="card">
     <div class="card-header">
-        <h4>Add Category</h4>
+        <h4 class="card-title slider-title float-left">Add Category</h4>
+        <a href="{{ url()->previous() }}" class="btn btn-danger float-right">Back</a>
     </div>
     <div class="card-body">
         <form action="{{ url("store-category") }}" method="POST" enctype="multipart/form-data">
