@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Frontend\FrontendController@index');
-
+Route::get('category/', 'Frontend\FrontendController@categories')->name('category');
+Route::get('view-category/{slug}', 'Frontend\FrontendController@viewCategory');
 
 Auth::routes();
 

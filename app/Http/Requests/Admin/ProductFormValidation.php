@@ -26,6 +26,7 @@ class ProductFormValidation extends FormRequest
         return [
             'category_id' => 'required',
             'name' => 'required|max:255',
+            'slug'=>'required',
             'small_description' => 'required',
             'description' => 'required',
             'original_price' => 'required',

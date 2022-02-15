@@ -33,6 +33,14 @@
                     @enderror
                 </div>
 
+                <div class="col-md-6 mb-3">
+                    <label for="slug">Slug</label>
+                    <input type="text" name="slug" class="form-control" value="{{ $product->slug }}">
+                    @error('slug')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
                 <div class="col-md-12 mb-3">
                     <label for="small_description">Small description</label>
                     <textarea name="small_description" id="" cols="30" rows="3" class="form-control">{{ $product->small_description }}</textarea>

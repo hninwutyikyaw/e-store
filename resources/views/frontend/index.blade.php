@@ -25,6 +25,25 @@
             </div>
         </div>
     </div>
+
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <h2>Trending Category</h2>
+                <div class="owl-carousel featured-carousel owl-theme">
+                    @foreach($trending_categories as $trending_category)
+                        <div class="item">
+                                <div class="card feature-card bg-light">
+                                    <img src="{{ asset('assets/uploads/category/'.  $trending_category->image) }}" alt="">
+                                </div>
+                                <p class="feature-title mt-2 fw-bold">{{ $trending_category->name }}</p>
+                                <p class="feature-price">K{{ $trending_category->selling_price }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('scripts')
